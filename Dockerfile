@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     tesseract-ocr \
     && rm -rf /var/lib/apt/lists/*
     # ffmpeg for audio/video processing
-    ffmpeg \
+    RUN apt-get update && apt-get install -y ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 # --- Install Playwright + Chromium ---
